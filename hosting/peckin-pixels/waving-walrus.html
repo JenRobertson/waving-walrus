@@ -1,0 +1,43 @@
+<html>
+    <style>
+        #container {
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -webkit-crisp-edges;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+
+        a {
+            width: 387px;
+            height: 400px;
+            display: block;
+            background-size: cover;
+            margin: 15px;
+            box-sizing: border-box;
+        }
+
+        #walrus {
+            background-image: url('img/waving-walrus-gif-transparent-large.gif');
+        }
+
+        .hidden {
+            position: absolute;
+            overflow: hidden;
+            left: -9999px; 
+            top: -9999px;
+            height: 1px;
+            width: 1px;
+        }
+
+    </style>
+    <head></head>
+    <body>
+        <div id='container'>
+                <a id='walrus' target="_blank" rel="noopener noreferrer nofollow" href='https://wavingwalrus.com/'> </a>
+        </div>
+    </body>
+</html>
