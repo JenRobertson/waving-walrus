@@ -30,6 +30,9 @@ p, li {
     background-color: #50d7f0;
 }
 
+a {
+    color: #82203b;;
+}
 .header {
     width: 100%;
     margin-left: auto;
@@ -238,4 +241,31 @@ h3 {
 
 strong {
     display: block;
+}
+
+/* Press Kit */
+
+.presskit-logos {
+    width: 30%;
+}
+
+.alt-bg {
+    background-color: white;
+    min-width: 500px;
+}
+
+.full-width-image {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+
+.half-width-image {
+    max-width: 49%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: inline-block;
 }
