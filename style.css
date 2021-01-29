@@ -31,7 +31,8 @@ p, li {
 }
 
 a {
-    color: #82203b;;
+    color: #82203b;
+    word-wrap: break-word;
 }
 
 .header {
