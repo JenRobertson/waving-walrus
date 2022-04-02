@@ -1,6 +1,6 @@
-body {
+body, footer {
     margin: 0;
-    background-color: #5bd3ec;
+    background-color: #0ca146;
     background-image: url('img/grass-tile.gif');
     background-attachment: fixed;
     box-sizing: border-box;
@@ -30,6 +30,11 @@ p, li {
     background-color: #50d7f0;
 }
 
+a {
+    color: #82203b;
+    word-wrap: break-word;
+}
+
 .header {
     width: 100%;
     margin-left: auto;
@@ -54,7 +59,7 @@ p, li {
     background-image: url(img/button--hover.gif);
 }
 
-main {
+main, footer {
     position: relative;
     padding: 20px;
     font-size: 30px;
@@ -63,13 +68,19 @@ main {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #f8f8f5;
+    background-color: #50d7f0;
     box-sizing: border-box;
     overflow: hidden;
     min-width: 300px;
     background-image: url('img/dot-background-tile--bigger.gif');
 }
 
+footer {
+    background-color: #50d7f0;
+    background-image: none;
+    text-align: center;
+    font-size: 25px;
+}
 .screenreader {
     position: absolute !important; /* Outside the DOM flow */
     height: 1px; width: 1px; /* Nearly collapsed */
@@ -78,90 +89,23 @@ main {
     clip: rect(1px, 1px, 1px, 1px); /* All other browsers */
 }
 
-.chicken {
-    width: 208px;
-    position: absolute;
-    transform: translate(0,0);
-    left: 0;
-    animation-name: chicken;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    margin-top: -32px;
-}
-
-@keyframes chicken {
-    from {left: -208px;}
-    to {left: 100%;}
-  }
-  
-
-.game-links {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.game-link {
-    padding: 0;
-    margin: 0;
-    border: none;
-    font-family: pixel-font-2;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 31.5%;
-    /* box-sizing: border-box; */
-    cursor: pointer;
-}
-
-.game-link--active {
-    /* border: 5px solid black; */
-    border-top:     5px solid black;;
-    border-right:   5px solid black;; 
-    border-left:  5px solid black;;
-}
-
-.game-link__image {
-    width: 100%;
-}
-.game-link__div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 8vw;
-    color: white;
-    width: 100%;
-    height: 100%;
-    background-color:black;
-    opacity: 0;
-    position: absolute;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 5px;
-    /* box-sizing: border-box; */
-}
-
-@media screen and (min-width: 800px) {
-    .game-link__div {
-       font-size: 70px;
-    }
-}
-
-.game-link:hover > .game-link__div, .game-link:focus > .game-link__div{
-    opacity: 0.8;
-}
-
 h1 {
     text-align: center;
 }
 
 h1, h2, h3, h4 {
     font-family: eight-bit-pusab;
+}
+
+h2 {
     font-size: 30px;
 }
 
 h3 {
+    font-size: 25px;
+}
+
+h4 {
     font-size: 20px;
 }
 
@@ -202,13 +146,14 @@ h3 {
     width: 100%;
     height: 100%;
     border: 0;
+    outline: none;
 }
 
 .video-container {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
-  }
+}
 
 @font-face {
     font-family: eight-bit-pusab;
@@ -225,17 +170,56 @@ h3 {
     src: url(fonts/pixel-font-2.ttf);
 }
 
-.ism-image {
-    max-height: 100%;
-    min-height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.full-width {
-    width: 100%;
-}
-
 strong {
     display: block;
+}
+
+/* Press Kit */
+
+/* LAYOUT */
+
+.layout-div {
+    font-size: 0;
+    position: relative;
+}
+
+.layout-div * {
+    vertical-align: middle;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+}
+
+.one-across {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+
+.two-across {
+    width: 50%;
+}
+
+.three-across {
+    width: 33.3%;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .three-across {
+        width: 50%;
+    }
+
+    .two-across {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .three-across {
+        width: 100%;
+    }
 }
