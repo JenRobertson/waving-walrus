@@ -44,10 +44,10 @@ a {
 }
 
 .pixel-button {
-    background-image: url(img/button.gif);
-    width: 127px;
+    background-image: url(img/button-sprite.gif);
+    width: 143px;
     display: inline-block;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 10px;
     text-align: center;
@@ -56,7 +56,7 @@ a {
 }
 
 .pixel-button:hover {
-    background-image: url(img/button--hover.gif);
+    background-position-y: -50px;
 }
 
 main, footer {
